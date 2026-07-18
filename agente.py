@@ -10,15 +10,15 @@ agente = Agent(
     name="Tutor IA",
 
     model=OpenAILike(
-        id="meta-llama/Llama-3.2-3B-Instruct",
-        base_url="https://api-inference.huggingface.co/v1",
-        api_key=os.getenv("HF_TOKEN"),
+        id="llama-3.1-8b-instant",
+        base_url="https://api.groq.com/openai/v1",
+        api_key=os.getenv("GROQ_API_KEY"),
     ),
 
     instructions=[
         "Responde siempre en español.",
         "Actúa como un profesor universitario.",
-        "Explica el tema de manera clara y detallada.",
+        "Explica los temas de manera clara y detallada.",
         "Incluye ejemplos prácticos.",
         "Adapta la explicación al nivel del estudiante.",
         "Finaliza con una pregunta de evaluación.",
