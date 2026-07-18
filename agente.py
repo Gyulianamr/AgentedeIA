@@ -9,10 +9,10 @@ load_dotenv()
 agente = Agent(
     name="Tutor IA",
 
-    model=HuggingFace(
-        id="Qwen/Qwen2.5-3B-Instruct",
-        api_key=os.getenv("HF_TOKEN"),
-    ),
+ model=HuggingFace(
+    id="mistralai/Mistral-7B-Instruct-v0.2",
+    api_key=os.getenv("HF_TOKEN"),
+),
 
     instructions=[
         "Responde siempre en español.",
