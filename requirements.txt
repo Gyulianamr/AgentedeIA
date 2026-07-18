@@ -2,4 +2,3 @@ agno
 streamlit
 python-dotenv
 openai
-huggingface-hub
