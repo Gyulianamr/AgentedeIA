@@ -12,7 +12,7 @@ agente = Agent(
     model=OpenAIChat(
         id="gpt-4.1-mini",
         api_key="	
-key_iFzugVmY1SC6eEeT",
+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",
     ),
 
     instructions=[
