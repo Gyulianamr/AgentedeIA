@@ -2,22 +2,23 @@ import os
 from dotenv import load_dotenv
 
 from agno.agent import Agent
-from agno.models.huggingface import HuggingFace
+from agno.models.openai.like import OpenAILike
 
 load_dotenv()
 
 agente = Agent(
     name="Tutor IA",
 
- model=HuggingFace(
-    id="mistralai/Mistral-7B-Instruct-v0.2",
-    api_key=os.getenv("HF_TOKEN"),
-),
+    model=OpenAILike(
+        id="meta-llama/Llama-3.2-3B-Instruct",
+        base_url="https://api-inference.huggingface.co/v1",
+        api_key=os.getenv("HF_TOKEN"),
+    ),
 
     instructions=[
         "Responde siempre en español.",
         "Actúa como un profesor universitario.",
-        "Explica los temas de forma clara y detallada.",
+        "Explica el tema de manera clara y detallada.",
         "Incluye ejemplos prácticos.",
         "Adapta la explicación al nivel del estudiante.",
         "Finaliza con una pregunta de evaluación.",
