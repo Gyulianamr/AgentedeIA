@@ -10,7 +10,8 @@ agente = Agent(
     name="Tutor IA",
   model=OpenAILike(
     id=r"C:\Users\genes\.lmstudio\models\wangkanai\qwen2.5-vl-3b-instruct\qwen2.5-vl-3b-instruct-abliterated-q4-k-m.gguf",
-    base_url=os.getenv("LM_STUDIO_BASE_URL"),
+    base_url=os.getenv("key_iFzugVmY1SC6eEeT
+L"),
     api_key="lm-studio",
 ),
     instructions=[
