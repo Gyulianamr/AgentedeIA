@@ -10,10 +10,9 @@ agente = Agent(
     name="Tutor IA",
 
     model=OpenAIChat(
-        id="gpt-4.1-mini",
-        api_key="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",
-    ),
-
+    id="gpt-4.1-mini",
+    api_key=os.getenv("OPENAI_API_KEY"),
+)
     instructions=[
         "Responde siempre en español.",
         "Actúa como un profesor universitario con experiencia.",
